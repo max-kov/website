@@ -1,5 +1,5 @@
 baseurl = "/"
-publishDir = "site"
+publishDir = "public"
 title = "Max's website"
 author = "Max Kovalovs"
 canonifyurls = true
