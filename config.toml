@@ -1,0 +1,32 @@
+baseurl = "/"
+publishDir = "site"
+title = "Max's website"
+author = "Max Kovalovs"
+canonifyurls = true
+languagecode = "en"
+theme = "hugo-tanka"
+
+googleAnalytics = ""
+disqusShortname = ""
+disable_mathjax = false
+
+pygmentsstyle      = "vs"
+pygmentscodefences = true
+
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+[params]
+  sitename = "Hugo Tanka Theme"
+
+[[menu.main]]
+    name = "CV"
+    url = "https://nanx.me"
+    weight = 1
+[[menu.main]]
+    name = "GitHub"
+    url = "https://github.com/max-kov"
+    weight = 2
+[[menu.main]]
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/road2stat"
+    weight = 3
