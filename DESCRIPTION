@@ -1,0 +1,12 @@
+Package: website
+Title: Max's website
+Version: 0.0.1
+Authors@R: person("Max", "Kovalovs", email = "first.last@example.com", role = c("aut", "cre"))
+Description: What the package does (one paragraph).
+Depends: R (>= 3.5.1)
+License: What license is it under?
+Imports:
+    rmarkdown,
+    blogdown
+Encoding: UTF-8
+LazyData: true
