@@ -1,4 +1,5 @@
 baseurl = "/"
+relativeurls = true
 publishDir = "public"
 title = "Max's website"
 author = "Max Kovalovs"
@@ -20,7 +21,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [[menu.main]]
     name = "CV"
-    url = "https://nanx.me"
+    url = "maxkovalovs.us"
     weight = 1
 [[menu.main]]
     name = "GitHub"
@@ -28,5 +29,5 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     weight = 2
 [[menu.main]]
     name = "LinkedIn"
-    url = "https://www.linkedin.com/in/road2stat"
+    url = ""
     weight = 3
