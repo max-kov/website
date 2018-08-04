@@ -12,10 +12,10 @@ cache:
     - $HOME/bin
 
 before_script:
-  - Rscript -e 'blogdown::install_hugo()'
+  - Rscript setup.R
 
 script:
-  - Rscript -e 'blogdown::build_site()'
+  - Rscript deploy.R
 
 deploy:
   provider: pages
