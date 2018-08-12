@@ -1,0 +1,43 @@
+---
+title: Git tricks
+author: Max Kovalovs
+date: '2018-08-11'
+slug: git-tricks
+categories: []
+tags: []
+---
+
+# Rebasing from a specific commit
+
+Say you have 3 branches going off master, and you want to merge back on master. Two of the three branches have 2 common commits, but the problem is that there is an extra commit on master, meaning that after rebasing the hashes are going to be different, after rebasing the first branch, you can rebase, *without adding the common commit* by using
+
+```
+git rebase --onto master <commit-ID-of-old-parent>
+```
+
+This will replay your work on top of master, starting from the commit specified.
+
+# Heads and references
+
+There are several useful references used by git which include the name `HEAD`. All of them contain a reference to a specific commit hash and could be used as shortcuts.
+
+## `HEAD`
+
+This references the latest commit on the current branch. Sometimes the head can be in detached state - the head is not pointing to the most recent commit.
+
+## ORIG_HEAD
+
+`ORIG_HEAD` is a reference to the `HEAD` before a dangerous operation. For example, before a merge, the `ORIG_HEAD` is usually set to `HEAD` so the user can revert if something goes wrong during the merge.
+
+## git reflog
+
+Running `git reflog` in a git repo returns something like this:
+
+```
+00h3h99 HEAD@{0}: commit: Last commit
+lbl1e19 HEAD@{1}: commit: Previous commit
+f2ka3s3 HEAD@{2}: commit: Second commit
+kf46be6 HEAD@{3}: commit: First commit
+```
+
+This gives us a hint - we can use `HEAD@{-number-}` to quickly navigate between commits, where `-number-` is the amount off commits back you want to go. However there are several ways of doing this: `HEAD^` or `HEAD~` will give the parent commit of the head and `HEAD^2` or `HEAD~2` or `HEAD^^` or `HEAD~~` will give the second parent of the commit.

@@ -1,10 +1,10 @@
 Package: website
 Title: Max's website
 Version: 0.0.1
-Authors@R: person("Max", "Kovalovs", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Authors@R: person("Max", "Kovalovs", email = "max@maxkovalovs.us", role = c("aut", "cre"))
+Description: Personal Website.
 Depends: R (>= 3.5.1)
-License: What license is it under?
+License: GPLv3
 Imports:
     rmarkdown,
     blogdown
