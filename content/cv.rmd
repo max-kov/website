@@ -1,0 +1,40 @@
+---
+title: "Max Kovalovs"
+---
+
+# Experience
+* **Boozy Bones**, *Nottingham, UK* — _Waiter_ (2016-2017)
+
+# Education
+* **Chilwell Sixth Form**, _Nottingham, UK_ (2016-2018)
+
+    *Computing, mathematics, further mathematics and physics A-Levels.*
+
+* **Riga 72nd Secondary School**, _Riga, Latvia_ (2005-2016)
+
+    *I was an active member of the programming society in school. We participated in hackathons and olympiads.*
+
+# Projects
+* **Pool Game** — [github.com/max-kov/pool](https://github.com/max-kov/pool)
+
+    *A 2d multiplayer pool game written in python. Some of the features are:*
+
+    + Realistic ball collisions
+    + 3d ball rendering with rotation matrices
+
+# Extra-curricular
+
+* **Progmeistars**, _Riga, Latvia_ (2013-2016)
+
+    + **Programming Courses**
+
+        *Took several programming courses at Progmeistars, where I learned the basics of programming. I did courses on graphics, OOP, algorithms and others.*
+
+    + **Junior IOI team**
+
+        *We participated in many solo and team events. To prepare for olympiads we had weekly lessons where we've covered computer science topics like big O notation, sorting algorithms and trees.*
+
+* **Nottingham Trent University**, _Nottingham, UK_ (1 week in July 2017)
+
+    *Spent a week in Nottingham Trent University with PhD students developing a VR model of Nottingham. The model was made in unity engine and I was working on vehicle movement.*
+
