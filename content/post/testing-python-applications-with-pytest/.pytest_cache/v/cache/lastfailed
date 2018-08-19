@@ -1,0 +1,5 @@
+{
+  "test_basic.py::TestFirst::()::test_function": true,
+  "test_parametrised.py::TestMath::()::test_eval[6*9-42]": true,
+  "test_zerodiv.py::TestDivByZero::()::test_no_error": true
+}

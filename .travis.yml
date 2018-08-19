@@ -1,6 +1,6 @@
 language: r
 dist: trusty
-sudo: false
+sudo: required
 
 branches:
   only:
@@ -11,8 +11,8 @@ cache:
   directories:
     - $HOME/bin
 
-before_script:
-  - Rscript setup.R
+install:
+  - ./install_dependencies.sh
 
 script:
   - Rscript deploy.R

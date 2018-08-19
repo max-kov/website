@@ -1,0 +1,8 @@
+[
+  "test_basic.py::TestFirst::()::test_function",
+  "test_parametrised.py::TestMath::()::test_eval[3+5-8]",
+  "test_parametrised.py::TestMath::()::test_eval[2+4-6]",
+  "test_parametrised.py::TestMath::()::test_eval[6*9-42]",
+  "test_zerodiv.py::TestDivByZero::()::test_div_by_zero",
+  "test_zerodiv.py::TestDivByZero::()::test_no_error"
+]
