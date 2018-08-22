@@ -10,23 +10,7 @@ output:
     toc: true
 ---
 
-# File and class structure
-
-To have your tests executed you need to put them in a *tests* folder. The tests should be grouped in classes where the class name starts with *Test*. Every test is a function of a test class which starts with *test*. Here's an easy example"
-
-```{r engine='bash', comment='', echo=FALSE}
-cat testing-python-applications-with-pytest/test_basic.py
-```
-
-```{r engine='bash', comment='', echo=FALSE}
-pytest testing-python-applications-with-pytest/test_basic.py -vv || true
-```
-
-As you can see to tests that the output value was indeed what you were expecting, you use the keyword `assert`
-
 # Asserting Errors
-
-Here's an example which asserts that an exception was raised:
 
 ```{r engine='bash', comment='', echo=FALSE}
 cat testing-python-applications-with-pytest/test_zerodiv.py
@@ -38,81 +22,57 @@ pytest testing-python-applications-with-pytest/test_zerodiv.py -vv || true
 
 # Fixtures
 
-A fixture is an object that is constructed specifically for the test and is passed as one of the parametres to the test. Here's an example of a database fixture:
+A fixture is an object that is constructed specifically for the test and is passed as one of the parameters to the test. For example, you could create and return a database connection in a fixture, use it in a test and then close it in the fixture when the *scope* is closed. More [here](https://docs.pytest.org/en/latest/example/simple.html).
 
-```
-# content of a/conftest.py
-import pytest
+# Patching
 
+Mocks allow you to replace parts of your production system (which is being tested) with mock objects and make assertions about how they have been used or make them return specified values. Pytest has a very neat fixture plugin called [pytest-mock](https://github.com/pytest-dev/pytest-mock), which uses builtin `unittest` module but wraps it in a pytest fixture, removing the annotation boilerplate and almost makes it look like magic. The `patch` in `unittest` decorator allows you to specify which object we are going to replace with a mock. With `pytest-mock` the process looks like this:
 
-class DB(object):
-    pass
+* Testing target
 
-
-@pytest.fixture(scope="session")
-def db():
-    return DB()
-
-def test_a1(db):
-    assert 0, db  # to show value
+```{r engine='bash', comment='', echo=FALSE}
+cat testing-python-applications-with-pytest/depth_counter1.py
 ```
 
-Pytest will see that the parametre db of `test_a1` has the same name as the fixture defined previously. The consequence is that pytest will pass the return of the fixture function as that parametre. Furthermore,
+* Testfile
 
-```
-import pytest
-
-
-class DB(object):
-    pass
-
-
-@pytest.fixture(scope="function")
-def db():
-    open_db()
-    yield DB()
-    close_db()
-
-def test_a1(db):
-    assert 0, db  # to show value
+```{r engine='bash', comment='', echo=FALSE}
+cat testing-python-applications-with-pytest/test_patch1.py
 ```
 
-the `yield` keyword will make python create and return the database connection, and then close it, when the *scope* is closed. In the second example a new fixture would be created for each test function. For more on fixtures click [here] (https://docs.pytest.org/en/latest/example/simple.html).
-
-# Mocking
-
-Mocks allow you to replace parts of your production system (which is being tested) with mock objects and make assertions about how they have been used or make them return specified values. A mock in unit test would be declared so:
-
-```
-@patch('module.ClassName2')
-@patch('module.ClassName1')
-def test(MockClass1, MockClass2):
-    module.ClassName1()
-    module.ClassName2()
-    assert MockClass1 is module.ClassName1
-    assert MockClass2 is module.ClassName2
-    assert MockClass1.called
-    assert MockClass2.called
+```{r engine='bash', comment='', echo=FALSE}
+pytest testing-python-applications-with-pytest/test_patch1.py -vv || true
 ```
 
-The `patch` decorator allows you to specify which object we are going to replace with a mock. With pytest-mock the process looks like this:
+The `mocker` argument is actually a Mock module fixture, provided by `pytest-mock` (can be seen in function parameters). Pytest has several of those standard builtin fixtures which you can access in any test, to see all of the ones you have installed run:
 
 ```
-class TestMath:
-    def test_power(self, mocker):
-        mocker.patch.object(math, "multiply")
-        math.multiply = 64
-        assert math.square(8) = 64
-```
-
-Instead of using patch as a decorator, it is called in the function. The `mocker` argument is actually a Mock module fixture, provided by pytest (can be seen in function parameters). Pytest has several of those standard builtin fixtures which you can access in any test.
-
-```{r engine='bash', comment=''}
 pytest -q --fixtures
 ```
 
+## Tricky imports
 
-# Other notes on mocking
+Consider this example:
+
+* Testing target
+
+```{r engine='bash', comment='', echo=FALSE}
+cat testing-python-applications-with-pytest/depth_counter2.py
+```
+
+* Testfile
+
+```{r engine='bash', comment='', echo=FALSE}
+cat testing-python-applications-with-pytest/test_patch2.py
+```
+
+```{r engine='bash', comment='', echo=FALSE}
+pytest testing-python-applications-with-pytest/test_patch2.py -vv || true
+```
+
+Python veterans who know how python imports work, will realise that by importing using the `from` keyword, the testing file will have it's own copy of the function, thus patching `os.getcwd` doesn't do anything and patching `depth_counter2.py` does.
+
+# Mocks
 
 Mocks don't have to strictly substitute functionality in the testing function, they can also be passed as regular arguments:
 
