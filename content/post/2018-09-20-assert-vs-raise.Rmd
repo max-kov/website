@@ -1,0 +1,45 @@
+---
+title: Assert vs raise
+author: Max Kovalovs
+date: '2018-09-20'
+slug: assert-vs-raise
+categories: ["python"]
+tags: []
+---
+
+# Intro
+In a perfect world nobody would need exceptions in their programs, however, often unexpected things happen during runtime - invalid values get submitted, users make typos when writing paths and so on. To handle this developers use exceptions - upon encountering an abnormal situation (e.g. division by zero) the normal execution flow is interrupted, until the exception is dealt with. In python, doing this would look like this:
+
+
+```{python}
+def calculate_pizza_area(pizza_radius:int, people_eating=1):
+    '''
+    Calculates the area of the pizza that each person will receive, assuming
+    the pizza is split equally among all people.
+    '''
+    if people_eating==1:
+        raise ZeroDivisionError
+    return (3.1415*(pizza_radius**2))/people_eating
+
+
+print(calculate_pizza_area(3))
+print(calculate_pizza_area(3, people_eating=0))
+```
+
+However, python has assertion statements, which do a similar thing:
+
+```{python}
+def calculate_pizza_area(pizza_radius:int, people_eating=1):
+    '''
+    Calculates the area of the pizza that each person will receive, assuming
+    the pizza is split equally among all people.
+    '''
+    assert people_eating!=1
+    return (3.1415*(pizza_radius**2))/people_eating
+
+
+print(calculate_pizza_area(3))
+print(calculate_pizza_area(3, people_eating=0))
+```
+
+The error message raised was different, but the code is much more readable.
