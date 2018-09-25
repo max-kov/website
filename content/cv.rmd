@@ -44,5 +44,5 @@ Worked full stack on a Python Flask web application for analyzing legal document
         *We participated in many solo and team events. To prepare for olympiads we had weekly lessons where we've covered computer science topics like big O notation, sorting algorithms and trees.*
 * **Nottingham Trent University**, _Nottingham, UK_ (1 week in July 2017)
 
-    *Spent a week in Nottingham Trent University with PhD students developing a VR model of Nottingham. The model was made in unity engine and I was working on vehicle movement.*
+    *I spent a week in Nottingham Trent University with PhD students developing a VR model of Nottingham. The model was made in unity engine and I worked on the vehicle movement aspect.*
 
