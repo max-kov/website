@@ -1,0 +1,24 @@
+---
+title: Very nice post
+author: Max Kovalovs
+date: '2018-09-25'
+slug: very-nice-post
+categories: ["shitpost"]
+tags: []
+---
+
+# Hey there this is the title
+
+This is the text of this file
+
+```{python}
+def fib(n):
+    if n<=1:
+        return 1
+    else:
+        return fib(n-1)+fib(n-2)
+
+fib(10)
+fib(0)
+```
+
