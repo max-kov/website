@@ -1,48 +1,67 @@
 ---
-title: "Max Kovalovs"
+date: '2018-09-20'
 ---
 
 # Internships
-* _TNG Technology Consulting_ (3 months)
+
+* TNG Technology Consulting
+
+_Munich, Germany - (3 months)_
 
 Worked full stack on a Python Flask web application for analyzing legal documents. Became familiar with JavaScript, Pandas, Flask and Jenkins. Acquired experience working in agile teams, writing good tests, developing REST APIs and presenting for clients. Was hired for this internship before I even started university.
 
 # Projects
-* **Pool Game** — [github.com/max-kov/pool](https://github.com/max-kov/pool)
 
-    *A 2d multiplayer pool game written in python. Some of the features are:*
+* Pool Game
 
-    + Realistic ball collisions
-    + 3d ball rendering with rotation matrices
-* **Max's Coding Notes** — [maxkovalovs.us](https://maxkovalovs.us/)
+[github.com/max-kov/pool](https://github.com/max-kov/pool)
 
-    *Minimal blog website*
+*A 2d multiplayer pool game written in python. Some of the features are:*
 
-    + Written in RMarkdown (Blogdown)
-    + Seamless compilation and deployment with TravisCI
++ Realistic ball collisions
++ 3d ball rendering with rotation matrices
+
+* Max's Coding Notes
+
+[maxkovalovs.us](https://maxkovalovs.us/)
+
+*Minimal blog website*
+
++ Written in RMarkdown (Blogdown)
++ Seamless compilation and deployment with TravisCI
+
 
 # Education
 
-* **Imperial College London**, _London, UK_ (2018-2021)
+* Imperial College London
 
-* **Chilwell Sixth Form**, _Nottingham, UK_ (2016-2018)
+_London, UK - 2018-2021_
 
-    *Computing, mathematics, further mathematics and physics A-Levels.*
-* **Riga 72nd Secondary School**, _Riga, Latvia_ (2005-2016)
+Computing Beng
 
-    *I was an active member of the programming society in school. We participated in hackathons and olympiads.*
+* Chilwell Sixth Form
+
+_Nottingham, UK - 2016-2018_
+
+A*, A*, A and A in mathematics, physics, computing and further mathematics A-Levels, respectively.
+
+* Riga 72nd Secondary School
+
+_Riga, Latvia - 2005-2016_
+
+I was an active member of the programming society in school. We participated in hackathons and Olympiads.
 
 # Extra-curricular
-* **Progmeistars**, _Riga, Latvia_ (2013-2016)
+* _Progmeistars_, *Riga, Latvia* (2013-2016)
 
-    + **Programming Courses**
+    + _Programming Courses_
 
         *Took several programming courses at Progmeistars, where I learned the basics of programming. I did courses on graphics, OOP, algorithms and others.*
 
-    + **Junior IOI team**
+    + _Junior IOI team_
 
         *We participated in many solo and team events. To prepare for olympiads we had weekly lessons where we've covered computer science topics like big O notation, sorting algorithms and trees.*
-* **Nottingham Trent University**, _Nottingham, UK_ (1 week in July 2017)
+* _Nottingham Trent University_, _Nottingham, UK_ (1 week in July 2017)
 
     *Spent a week in Nottingham Trent University with PhD students developing a VR model of Nottingham. The model was made in unity engine and I was working on vehicle movement.*
 
