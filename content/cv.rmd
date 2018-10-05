@@ -1,67 +1,57 @@
 ---
 date: '2018-09-20'
+author: Max Kovalovs
+title: Resume
 ---
 
 # Internships
 
-* TNG Technology Consulting
+<div class="cvHeading"><p class="name">TNG Technology Consulting</p><p class="description">Munich, Germany - (3 months)</p></div>
 
-_Munich, Germany - (3 months)_
-
-Worked full stack on a Python Flask web application for analyzing legal documents. Became familiar with JavaScript, Pandas, Flask and Jenkins. Acquired experience working in agile teams, writing good tests, developing REST APIs and presenting for clients. Was hired for this internship before I even started university.
+<div class="fullDescr">Worked full stack on a Python Flask web application for analyzing legal documents. Became familiar with JavaScript, Pandas, Flask and Jenkins. Acquired experience working in agile teams, writing good tests, developing REST APIs and presenting for clients. Was hired for this internship before I even started university.</div>
 
 # Projects
 
-* Pool Game
+<div class="cvHeading"><p class="name">Pool Game</p><p class="description">[github.com/max-kov/pool](https://github.com/max-kov/pool)</p></div>
 
-[github.com/max-kov/pool](https://github.com/max-kov/pool)
-
-*A 2d multiplayer pool game written in python. Some of the features are:*
+<div class="fullDescr">A 2d multiplayer pool game written in python. Some of the features are:</div>
 
 + Realistic ball collisions
 + 3d ball rendering with rotation matrices
 
-* Max's Coding Notes
+<div class="cvHeading"><p class="name">Max's Coding Notes</p><p class="description">[maxkovalovs.us](https://maxkovalovs.us/)</p></div>
 
-[maxkovalovs.us](https://maxkovalovs.us/)
-
-*Minimal blog website*
+<div class="fullDescr">Minimal blog website</div>
 
 + Written in RMarkdown (Blogdown)
 + Seamless compilation and deployment with TravisCI
 
-
 # Education
 
-* Imperial College London
+<div class="cvHeading"><p class="name">Imperial College London</p><p class="description">London, UK - 2018-2021</p></div>
 
-_London, UK - 2018-2021_
+<div class="fullDescr">Computing Beng</div>
 
-Computing Beng
+<div class="cvHeading"><p class="name">Chilwell Sixth Form</p><p class="description">Nottingham, UK - 2016-2018</p></div>
 
-* Chilwell Sixth Form
+<div class="fullDescr">A\*, A\*, A and A in mathematics, physics, computing and further mathematics A-Levels, respectively.</div>
 
-_Nottingham, UK - 2016-2018_
+<div class="cvHeading"><p class="name">Riga 72nd Secondary School</p><p class="description">Riga, Latvia - 2005-2016</p></div>
 
-A*, A*, A and A in mathematics, physics, computing and further mathematics A-Levels, respectively.
-
-* Riga 72nd Secondary School
-
-_Riga, Latvia - 2005-2016_
-
-I was an active member of the programming society in school. We participated in hackathons and Olympiads.
+<div class="fullDescr">I was an active member of the programming society in school. We participated in hackathons and Olympiads.</div>
 
 # Extra-curricular
-* _Progmeistars_, *Riga, Latvia* (2013-2016)
+<div class="cvHeading"><p class="name">Progmeistars</p><p class="description">Riga, Latvia (2013-2016)</p></div>
 
-    + _Programming Courses_
++ Programming Courses
 
-        *Took several programming courses at Progmeistars, where I learned the basics of programming. I did courses on graphics, OOP, algorithms and others.*
+Took several programming courses at Progmeistars, where I learned the basics of programming. I did courses on graphics, OOP, algorithms and others.
 
-    + _Junior IOI team_
++ Junior IOI team
 
-        *We participated in many solo and team events. To prepare for olympiads we had weekly lessons where we've covered computer science topics like big O notation, sorting algorithms and trees.*
-* _Nottingham Trent University_, _Nottingham, UK_ (1 week in July 2017)
+We participated in many solo and team events. To prepare for olympiads we had weekly lessons where we've covered computer science topics like big O notation, sorting algorithms and trees.
 
-    *Spent a week in Nottingham Trent University with PhD students developing a VR model of Nottingham. The model was made in unity engine and I was working on vehicle movement.*
+<div class="cvHeading"><p class="name">Nottingham Trent University</p><p class="description">Nottingham, UK - 1 week in July 2017</p></div>
+
+<div class="fullDescr">Spent a week in Nottingham Trent University with PhD students developing a VR model of Nottingham. The model was made in unity engine and I was working on vehicle movement.</div>
 
