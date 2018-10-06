@@ -1,5 +1,5 @@
 Package: website
-Title: Max's website
+Title: The Archived
 Version: 0.0.1
 Authors@R: person("Max", "Kovalovs", email = "max@maxkovalovs.us", role = c("aut", "cre"))
 Description: Personal Website.

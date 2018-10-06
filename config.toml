@@ -1,7 +1,7 @@
 baseurl = "/"
 relativeurls = true
 publishDir = "public"
-title = "Max's Notes"
+title = "The Archived"
 author = "Max Kovalovs"
 canonifyurls = true
 languagecode = "en"
@@ -21,7 +21,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [[menu.main]]
     name = "Resume"
-    url = "/cv"
+    url = "/cv.pdf"
     weight = 1
 [[menu.main]]
     name = "GitHub"
@@ -29,5 +29,5 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     weight = 2
 [[menu.main]]
     name = "LinkedIn"
-    url = ""
+    url = "https://www.linkedin.com/in/max-kovalovs/"
     weight = 3
