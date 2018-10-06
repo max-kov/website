@@ -17,7 +17,7 @@ pygmentscodefences = true
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [params]
-  sitename = "Max's Coding Notes"
+  sitename = "The Archived"
 
 [[menu.main]]
     name = "Resume"
