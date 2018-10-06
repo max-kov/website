@@ -7,23 +7,24 @@ categories: []
 tags: []
 ---
 
-# Rebasing from a specific commit
+# The interactive rebase
 
-Say you have 3 branches going off master, and you want to merge back on master. Two of the three branches have 2 common commits, but the problem is that there is an extra commit on master, meaning that after rebasing the hashes are going to be different, after rebasing the first branch, you can rebase, *without adding the common commit* by using
+The interactive rebase is one of the most powerful tools in git. The idea of the rebase is to change the base of a branch to something different, replaying unique commits on top of the base. In a way this is a cherry-pick that picks the whole branch instead of a single commit. The interactive rebase allows the user to rebase, but also edit the commits before rebasing.
 
 ```
-git rebase --onto master <commit-ID-of-old-parent>
+git rebase -i <new_base_branch>
 ```
 
-This will replay your work on top of master, starting from the commit specified.
+You can change commit messages, drop and squash commits.
+
 
 # Heads and references
 
 There are several useful references used by git which include the name `HEAD`. All of them contain a reference to a specific commit hash and could be used as shortcuts.
 
-## `HEAD`
+## The `HEAD`
 
-This references the latest commit on the current branch. Sometimes the head can be in detached state - the head is not pointing to the most recent commit.
+`HEAD` references the latest commit on the current branch. Sometimes the head can be in detached state - the head is not pointing to the most recent commit.
 
 ## ORIG_HEAD
 

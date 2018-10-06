@@ -30,4 +30,24 @@ cat assert-vs-raise/pizza_slice_assert.py
 python assert-vs-raise/pizza_slice_assert.py || true
 ```
 
-The error message raised was different, but the code is much more readable.
+
+# Differences
+
+Both keywords are used to raise an exception but there are some key differences:
+
+ - `assert` cannot specify the type of the error raised, it will always raise `AssertionError`.
+ - As a result of the previous point, `assert` statements become more readable because they only take one line of code.
+ - `assert` statements can be fully disabled during runtime using the `-O` flag a.k.a. the optimise mode.
+
+# Use cases
+
+In computer programming, assertions have a special meaning - an expression that is assumed or asserted to be true. Therefore, programmers usually use assertions to state the conditions that are *required* to be true for the program to run. However, if a user submitted a wrong path to the required file, even though the program cannot execute further, we only need to ask the user to check and correct the submitted path, hence a `raise FileNotFoundError` would be more appropriate.
+
+On the other hand, if our function received a string instead of an integer as one of its inputs, we cannot recover because receiving an integer is one of the requirements for the procedure to run.
+
+# Conclusion
+
+`assert` statements could be used effectively to describe the expected input/conditions of the function during development time, due to their smaller code size comparing to `raise` statements. However, assertions should only be used for debugging during development time, not only because they can be disabled with the `-O` flag, but also because production code should be tested and all conditions that could cause an error should be handled during input validation.
+
+`assert` statements should never be used for input validation and to detect other predictable errors during runtime, they should be handled with `raise` statements.
+
