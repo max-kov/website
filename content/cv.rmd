@@ -1,57 +1,74 @@
 ---
-date: '2018-09-20'
 author: Max Kovalovs
 title: Resume
+output: pdf_document
+header-includes:
+ \usepackage{enumitem}
+ \usepackage{multicol}
+ \pagenumbering{gobble}
 ---
 
 # Internships
 
-<div class="cvHeading"><p class="name">TNG Technology Consulting</p><p class="description">Munich, Germany - (3 months)</p></div>
+__TNG Technology Consulting__ \hfill _Munich, Germany (3 months in 2018)_
 
-<div class="fullDescr">Worked full stack on a Python Flask web application for analyzing legal documents. Became familiar with JavaScript, Pandas, Flask and Jenkins. Acquired experience working in agile teams, writing good tests, developing REST APIs and presenting for clients. Was hired for this internship before I even started university.</div>
+Worked full stack on a Python Flask web application for analyzing legal documents. Became familiar with JavaScript, Pandas, Flask and Jenkins. Acquired experience working in agile teams, writing good tests, developing REST APIs and presenting for clients. Was hired for this internship before I even started university.
 
 # Projects
 
-<div class="cvHeading"><p class="name">Pool Game</p><p class="description">[github.com/max-kov/pool](https://github.com/max-kov/pool)</p></div>
+__Pool Game__ \hfill _[github.com/max-kov/pool](https://github.com/max-kov/pool)_
 
-<div class="fullDescr">A 2d multiplayer pool game written in python. Some of the features are:</div>
+A 2d multiplayer pool game written in python. Some of the features are:</div>
 
 + Realistic ball collisions
 + 3d ball rendering with rotation matrices
 
-<div class="cvHeading"><p class="name">Max's Coding Notes</p><p class="description">[maxkovalovs.us](https://maxkovalovs.us/)</p></div>
+__The Archived__ \hfill _[maxkovalovs.us](https://maxkovalovs.us/)_
 
-<div class="fullDescr">Minimal blog website</div>
+Minimal blog website
 
 + Written in RMarkdown (Blogdown)
 + Seamless compilation and deployment with TravisCI
 
-# Education
 
-<div class="cvHeading"><p class="name">Imperial College London</p><p class="description">London, UK - 2018-2021</p></div>
+\begin{multicols}{2}
+\section{Extra-curricular}
+\textbf{Progmeistars}\\
+\textit{Riga, Latvia (2013-2016)}
 
-<div class="fullDescr">Computing Beng</div>
-
-<div class="cvHeading"><p class="name">Chilwell Sixth Form</p><p class="description">Nottingham, UK - 2016-2018</p></div>
-
-<div class="fullDescr">A\*, A\*, A and A in mathematics, physics, computing and further mathematics A-Levels, respectively.</div>
-
-<div class="cvHeading"><p class="name">Riga 72nd Secondary School</p><p class="description">Riga, Latvia - 2005-2016</p></div>
-
-<div class="fullDescr">I was an active member of the programming society in school. We participated in hackathons and Olympiads.</div>
-
-# Extra-curricular
-<div class="cvHeading"><p class="name">Progmeistars</p><p class="description">Riga, Latvia (2013-2016)</p></div>
-
-+ Programming Courses
+\begin{enumerate}
+\item Programming Courses
+\end{enumerate}
 
 Took several programming courses at Progmeistars, where I learned the basics of programming. I did courses on graphics, OOP, algorithms and others.
 
-+ Junior IOI team
+\begin{enumerate}[resume]
+\item Junior IOI team
+\end{enumerate}
 
 We participated in many solo and team events. To prepare for olympiads we had weekly lessons where we've covered computer science topics like big O notation, sorting algorithms and trees.
 
-<div class="cvHeading"><p class="name">Nottingham Trent University</p><p class="description">Nottingham, UK - 1 week in July 2017</p></div>
+\textbf{Nottingham Trent University}\\
+\textit{Nottingham, UK (1 week in July 2017)}
 
-<div class="fullDescr">Spent a week in Nottingham Trent University with PhD students developing a VR model of Nottingham. The model was made in unity engine and I was working on vehicle movement.</div>
+Spent a week in Nottingham Trent University with PhD students developing a VR model of Nottingham. The model was made in unity engine and I was working on vehicle movement.
+\vfill\null
+\columnbreak
+\section{Education}
+
+\textbf{Imperial College London}\\
+\textit{London, UK (2018-2021)}
+
+Computing Beng
+
+\textbf{Chilwell Sixth Form}\\
+\textit{Nottingham, UK (2016-2018)}
+
+A*, A*, A and A in mathematics, physics, computing and further mathematics A-Levels, respectively.
+
+\textbf{Riga 72nd Secondary School}\\
+\textit{Riga, Latvia (2005-2016)}
+
+I was an active member of the programming society in school. We participated in hackathons and Olympiads.
+\end{multicols}
 
