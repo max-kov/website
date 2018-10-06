@@ -12,13 +12,13 @@ header-includes:
 
 __TNG Technology Consulting__ \hfill _Munich, Germany (3 months in 2018)_
 
-Worked full stack on a Python Flask web application for analyzing legal documents. Became familiar with JavaScript, Pandas, Flask and Jenkins. Acquired experience working in agile teams, writing good tests, developing REST APIs and presenting for clients. Was hired for this internship before I even started university.
+I worked full stack on a Python Flask web application for analyzing legal documents. During this I became familiar with JavaScript, Pandas, Flask and Jenkins. I also acquired experience working in agile teams, writing good and meaningful tests, developing REST APIs and presenting projects to clients. I was hired for this internship before I had even started university.
 
 # Projects
 
 __Pool Game__ \hfill _[github.com/max-kov/pool](https://github.com/max-kov/pool)_
 
-A 2d multiplayer pool game written in python. Some of the features are:</div>
+A 2d multiplayer pool game written in python. A breif summary of the features are:</div>
 
 + Realistic ball collisions
 + 3d ball rendering with rotation matrices
@@ -40,18 +40,18 @@ Minimal blog website
 \item Programming Courses
 \end{enumerate}
 
-Took several programming courses at Progmeistars, where I learned the basics of programming. I did courses on graphics, OOP, algorithms and others.
+I've taken several programming courses at Progmeistars, where I learned the basics of programming. The courses I did were on graphics, OOP, algorithms and others.
 
 \begin{enumerate}[resume]
 \item Junior IOI team
 \end{enumerate}
 
-We participated in many solo and team events. To prepare for olympiads we had weekly lessons where we've covered computer science topics like big O notation, sorting algorithms and trees.
+We participated in many solo and team events. To prepare for olympiads we had weekly lessons where we covered computer science topics such as big O notation, sorting algorithms and trees.
 
 \textbf{Nottingham Trent University}\\
 \textit{Nottingham, UK (1 week in July 2017)}
 
-Spent a week in Nottingham Trent University with PhD students developing a VR model of Nottingham. The model was made in unity engine and I was working on vehicle movement.
+I've spent a week in Nottingham Trent University with PhD students developing a VR model of Nottingham. The model was made in unity engine and I was working on vehicle movement.
 \vfill\null
 \columnbreak
 \section{Education}
