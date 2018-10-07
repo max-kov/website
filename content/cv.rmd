@@ -60,5 +60,5 @@ Computing Beng.
 \textbf{Chilwell Sixth Form}\\
 \textit{Nottingham, UK (2016-2018)}
 
-A*, A*, A and A in mathematics, physics, computing and further mathematics A-Levels, respectively. \textbf{Participated in hackathons and Olympiads.}
+Studied mathematics (A*), physics (A*), computing (A) and further mathematics (A) A-Levels. \textbf{Participated in hackathons and Olympiads.}
 \end{multicols}
