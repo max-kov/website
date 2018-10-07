@@ -1,4 +1,4 @@
-def calculate_pizza_area(pizza_radius:int, people_eating=1):
+def calculate_pizza_area(pizza_radius, people_eating=1):
     '''
     Calculates the area of the pizza that each person will receive, assuming
     the pizza is split equally among all people.
