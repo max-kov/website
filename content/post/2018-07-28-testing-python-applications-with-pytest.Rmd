@@ -72,6 +72,7 @@ pytest testing-python-applications-with-pytest/test_patch2.py -vv || true
 
 Python veterans who know how python imports work, will realise that by importing using the `from` keyword, the testing file will have it's own copy of the function, thus patching `os.getcwd` doesn't do anything and patching `depth_counter2.py` does.
 
+
 # Mocks
 
 Mocks don't have to strictly substitute functionality in the testing function, they can also be passed as regular arguments:
@@ -93,7 +94,7 @@ So here, instead of making a complicated form with user data, we just make a moc
 
 # Parametrization
 
-Instead of running a lot of tests which basically do the same thing with different input, we can parametrize tests:
+If you have loads of tests that run the same code on different input you can parametrize the tests:
 
 ```{r engine='bash', comment='', echo=FALSE}
 cat testing-python-applications-with-pytest/test_parametrised.py
@@ -101,16 +102,6 @@ cat testing-python-applications-with-pytest/test_parametrised.py
 
 ```{r engine='bash', comment='', echo=FALSE}
 pytest testing-python-applications-with-pytest/test_parametrised.py -vv || true
-```
-
-This is pretty nice, because it shrinks the code size of the tests, but that comes at a cost - the tests don't have separate test names. This can be fixed with test ids:
-
-```{r engine='bash', comment='', echo=FALSE}
-cat testing-python-applications-with-pytest/test_parametrised_with_ids.py
-```
-
-```{r engine='bash', comment='', echo=FALSE}
-pytest testing-python-applications-with-pytest/test_parametrised_with_ids.py -vv || true
 ```
 
 When you run `pytest --verbose` the test id string will be printed along with the string. Still, different groups of tests should be grouped together in different test functions or test classes.
