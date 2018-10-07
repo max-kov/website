@@ -5,6 +5,7 @@ output: pdf_document
 header-includes:
  \usepackage{enumitem}
  \usepackage{multicol}
+ \usepackage{graphicx}
  \pagenumbering{gobble}
 ---
 
@@ -12,16 +13,17 @@ header-includes:
 
 __TNG Technology Consulting__ \hfill _Munich, Germany (3 months in 2018)_
 
-I worked full stack on a Python Flask web application for analyzing legal documents. During this I became familiar with JavaScript, Pandas, Flask and Jenkins. I also acquired experience working in agile teams, writing good and meaningful tests, developing REST APIs and presenting projects to clients. I was hired for this internship before I had even started university.
+__I worked full stack on a Python Flask web application which extracted important data from legal documents using simple NLP techniques. I developed all of the front-end and a big part of cleaning uploaded documents. Additionally, created continuous testing pipelines with Jenkins, tox and pytest. Became familiar with JavaScript and Pandas. Acquired experience working in agile teams, writing good tests, developing REST APIs and presenting and talking to clients.__ I was hired for this internship before I had even started university.
 
 # Projects
 
 __Pool Game__ \hfill _[github.com/max-kov/pool](https://github.com/max-kov/pool)_
 
-A 2d multiplayer pool game written in python. A breif summary of the features are:</div>
+A 2d __top-down__ pool game written in python.
 
-+ Realistic ball collisions
++ Realistic ball collisions __based on Newtonian mechanics__
 + 3d ball rendering with rotation matrices
++ __Code analysis and testing with CodeClimate and TravisCI__
 
 __The Archived__ \hfill _[maxkovalovs.us](https://maxkovalovs.us/)_
 
@@ -29,29 +31,23 @@ Minimal blog website
 
 + Written in RMarkdown (Blogdown)
 + Seamless compilation and deployment with TravisCI
-
++ __Hosted on GitHubPages__
 
 \begin{multicols}{2}
 \section{Extra-curricular}
 \textbf{Progmeistars}\\
 \textit{Riga, Latvia (2013-2016)}
 
-\begin{enumerate}
-\item Programming Courses
-\end{enumerate}
+$\bullet Programming\ Courses\\$
+Took several programming courses at Progmeistars, where I learned the basics of programming. I did courses on graphics, OOP, algorithms and others.
 
-I've taken several programming courses at Progmeistars, where I learned the basics of programming. The courses I did were on graphics, OOP, algorithms and others.
-
-\begin{enumerate}[resume]
-\item Junior IOI team
-\end{enumerate}
-
-We participated in many solo and team events. To prepare for olympiads we had weekly lessons where we covered computer science topics such as big O notation, sorting algorithms and trees.
+$\bullet Junior\ IOI\ team\\$
+We participated in many solo and team events. To prepare for olympiads we had weekly lessons where we've covered computer science topics like big O notation, sorting algorithms and trees.
 
 \textbf{Nottingham Trent University}\\
 \textit{Nottingham, UK (1 week in July 2017)}
 
-I've spent a week in Nottingham Trent University with PhD students developing a VR model of Nottingham. The model was made in unity engine and I was working on vehicle movement.
+Spent a week with PhD students developing a VR model of Nottingham. The model was made in unity engine and I was working on vehicle movement.
 \vfill\null
 \columnbreak
 \section{Education}
@@ -59,16 +55,10 @@ I've spent a week in Nottingham Trent University with PhD students developing a 
 \textbf{Imperial College London}\\
 \textit{London, UK (2018-2021)}
 
-Computing Beng
+Computing Beng.
 
 \textbf{Chilwell Sixth Form}\\
 \textit{Nottingham, UK (2016-2018)}
 
-A*, A*, A and A in mathematics, physics, computing and further mathematics A-Levels, respectively.
-
-\textbf{Riga 72nd Secondary School}\\
-\textit{Riga, Latvia (2005-2016)}
-
-I was an active member of the programming society in school. We participated in hackathons and Olympiads.
+A*, A*, A and A in mathematics, physics, computing and further mathematics A-Levels, respectively. \textbf{Participated in hackathons and Olympiads.}
 \end{multicols}
-
