@@ -83,14 +83,12 @@ from mock import Mock
 class TestRegister:
     def test_under_18(self, mocker):
         form = Mock()
-        form.name = "MAX"
-        form.lastname = "MAXIMUS"
         form.age = "17"
 
-        assert not validate(form)
+        assert not validate_age(form)
 ```
 
-So here, instead of making a complicated form with user data, we just make a mock, and enter the values we know will be used, thus avoiding exporting a lot of from other libraries.
+Here, instead of making a complicated form object with user data, we just make a mock that will have only the values that will be tested.
 
 # Parametrization
 
