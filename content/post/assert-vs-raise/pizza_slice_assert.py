@@ -3,7 +3,7 @@ def calculate_pizza_area(pizza_radius, people_eating=1):
     Calculates the area of the pizza that each person will receive, assuming
     the pizza is split equally among all people.
     '''
-    assert people_eating!=1
+    assert people_eating!=0
     return (3.1415*(pizza_radius**2))/people_eating
 
 
