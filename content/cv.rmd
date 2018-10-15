@@ -1,64 +1,69 @@
 ---
-author: Max Kovalovs
-title: Resume
+title: Max Kovalovs
 output: pdf_document
 header-includes:
  \usepackage{enumitem}
  \usepackage{multicol}
  \usepackage{graphicx}
+ \usepackage{lipsum}
+ \usepackage{array, xcolor}
+ \usepackage{geometry}
+ \definecolor{lightgray}{gray}{0.8}
+ \newcolumntype{L}{>{\raggedleft}p{0.17\textwidth}}
+ \newcolumntype{R}{p{0.8\textwidth}}
+ \newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
  \pagenumbering{gobble}
+ \subtitle{max@maxkovalovs.us}
+ \geometry{bottom=1cm,top=1cm}
 ---
 
-# Internships
 
-__TNG Technology Consulting__ \hfill _Munich, Germany (3 months in 2018)_
+\section*{Education}
+\begin{tabular}{L!{\VRule}R}
+2018 - 2021&{\bf Imperial College London} \hfill \textit{BEng. Computing}\\
+2016 - 2018&{\bf Chilwell Sixth Form} \hfill \textit{A-Levels}\\
+&Mathematics (A*), physics (A*), computing (A) and further mathematics (A) A-Levels. Participated in hackathons and Olympiads.
+\end{tabular}
 
-__I worked full stack on a Python Flask web application which extracted important data from legal documents using simple NLP techniques. I developed all of the front-end and a big part of cleaning uploaded documents. Additionally, created continuous testing pipelines with Jenkins, tox and pytest. Became familiar with JavaScript and Pandas. Acquired experience working in agile teams, writing good tests, developing REST APIs and presenting and talking to clients.__ I was hired for this internship before I had even started university.
+\section*{Employement}
+\begin{tabular}{L!{\VRule}R}
+12 weeks in 2018&{\bf TNG Technology Consulting} \hfill \textit{Internship}\\
+&Built a Python Flask web application from scratch which provided important data from legal documents to simple NLP algorithms.
+\begin{itemize}
+\item Created a continuous integration pipeline with Jenkins, tox and pytest.
+\item Designed a normalised multi-table database schema to store document information.
+\item Dockerized the application for easy deployment.
+\item Developed a front end for uploading documents into the system.
+\item Used Pandas to create statistic plots and to store feature data.
+\item Acquired experience working in agile teams, writing good tests, presenting and talking to clients.
+\end{itemize}
+\end{tabular}
 
-# Projects
+\section*{Projects}
+\begin{tabular}{L!{\VRule}R}
+2017&{\bf Pool Game}\hfill \textit{github.com/max-kov/pool}\\
+&A 2d top-down pool game written in python.
+\begin{itemize}
+\item Realistic ball collisions based on Newtonian mechanics
+\item Code analysis and testing pipelines with CodeClimate and TravisCI.
+\item Custom 3d ball rendering
+\end{itemize}\\
+2018&{\bf The Archived}\hfill \textit{maxkovalovs.us}\\
+&A minimal blog website.
+\begin{itemize}
+\item Written in RMarkdown (Blogdown)
+\item Seamless compilation and deployment with TravisCI
+\item Hosted on GitHubPages
+\end{itemize}
+\end{tabular}
 
-__Pool Game__ \hfill _[github.com/max-kov/pool](https://github.com/max-kov/pool)_
-
-A 2d __top-down__ pool game written in python.
-
-+ Realistic ball collisions __based on Newtonian mechanics__
-+ 3d ball rendering with rotation matrices
-+ __Code analysis and testing with CodeClimate and TravisCI__
-
-__The Archived__ \hfill _[maxkovalovs.us](https://maxkovalovs.us/)_
-
-Minimal blog website
-
-+ Written in RMarkdown (Blogdown)
-+ Seamless compilation and deployment with TravisCI
-+ __Hosted on GitHubPages__
-
-\begin{multicols}{2}
-\section{Extra-curricular}
-\textbf{Progmeistars}\\
-\textit{Riga, Latvia (2013-2016)}
-
-$\bullet Programming\ Courses\\$
-Took several programming courses at Progmeistars, where I learned the basics of programming. I did courses on graphics, OOP, algorithms and others.
-
-$\bullet Junior\ IOI\ team\\$
-We participated in many solo and team events. To prepare for olympiads we had weekly lessons where we've covered computer science topics like big O notation, sorting algorithms and trees.
-
-\textbf{Nottingham Trent University}\\
-\textit{Nottingham, UK (1 week in July 2017)}
-
-Spent a week with PhD students developing a VR model of Nottingham. The model was made in unity engine and I was working on vehicle movement.
-\vfill\null
-\columnbreak
-\section{Education}
-
-\textbf{Imperial College London}\\
-\textit{London, UK (2018-2021)}
-
-Computing Beng.
-
-\textbf{Chilwell Sixth Form}\\
-\textit{Nottingham, UK (2016-2018)}
-
-Studied mathematics (A*), physics (A*), computing (A) and further mathematics (A) A-Levels. \textbf{Participated in hackathons and Olympiads.}
-\end{multicols}
+\section*{Extra-curricular}
+\begin{tabular}{L!{\VRule}R}
+2013 - 2016&{\bf Progmaistars}\hfill \textit{Computer science school}\\
+&\begin{itemize}
+\item Took several programming courses at Progmeistars, where I learned the basics of programming. I did courses on graphics, OOP, algorithms and others.
+\item Was a part of a junior IOI team. We participated in many solo and team events. To prepare for olympiads we had weekly lessons where we've covered computer science topics like big O notation, sorting algorithms and trees.
+\end{itemize}\\
+1 week in 2017&{\bf Nottingham Trent University}\hfill \textit{Experience}\\
+&Spent a week with PhD students developing a VR model of Nottingham. The model was made in unity engine and I was working on vehicle movement.
+\end{tabular}
