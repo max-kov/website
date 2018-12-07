@@ -13,28 +13,28 @@ header-includes:
  \newcolumntype{R}{p{0.8\textwidth}}
  \newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
  \pagenumbering{gobble}
- \subtitle{max@maxkovalovs.us}
+ \subtitle{max@maxkovalovs.us $\cdot$ github.com/max-kov}
  \geometry{bottom=1cm,top=1cm}
 ---
 
 
 \section*{Education}
 \begin{tabular}{L!{\VRule}R}
-2018 - 2021&{\bf Imperial College London} \hfill \textit{BEng. Computing}\\
+2018 - present&{\bf Imperial College London} \hfill \textit{BEng. Computing}\\
 2016 - 2018&{\bf Chilwell Sixth Form} \hfill \textit{A-Levels}\\
 &Mathematics (A*), physics (A*), computing (A) and further mathematics (A) A-Levels. Participated in hackathons and Olympiads.
 \end{tabular}
 
 \section*{Employement}
 \begin{tabular}{L!{\VRule}R}
-12 weeks in 2018&{\bf TNG Technology Consulting} \hfill \textit{Internship}\\
+Summer 2018&{\bf TNG Technology Consulting} \hfill \textit{Software Engineer Intern}\\
 &Built a Python Flask web application from scratch which provided important data from legal documents to simple NLP algorithms.
 \begin{itemize}
 \item Created a continuous integration pipeline with Jenkins, tox and pytest.
-\item Designed a normalised multi-table database schema to store document information.
-\item Dockerized the application for easy deployment.
+\item Designed a normalised multi-table database schema to store document information
+\item Dockerised the application for easy deployment.
 \item Developed a front end for uploading documents into the system.
-\item Used Pandas to create statistic plots and to store feature data.
+\item Performed data analysis of the legal document dataset using Pandas
 \item Acquired experience working in agile teams, writing good tests, presenting and talking to clients.
 \end{itemize}
 \end{tabular}
@@ -49,7 +49,7 @@ header-includes:
 \item Custom 3d ball rendering
 \end{itemize}\\
 2018&{\bf The Archived}\hfill \textit{maxkovalovs.us}\\
-&A minimal blog website.
+&Personal blog on programming-related topics.
 \begin{itemize}
 \item Written in RMarkdown (Blogdown)
 \item Seamless compilation and deployment with TravisCI
@@ -64,6 +64,6 @@ header-includes:
 \item Took several programming courses at Progmeistars, where I learned the basics of programming. I did courses on graphics, OOP, algorithms and others.
 \item Was a part of a junior IOI team. We participated in many solo and team events. To prepare for olympiads we had weekly lessons where we've covered computer science topics like big O notation, sorting algorithms and trees.
 \end{itemize}\\
-1 week in 2017&{\bf Nottingham Trent University}\hfill \textit{Experience}\\
+July 2017&{\bf Nottingham Trent University}\hfill \textit{Experience}\\
 &Spent a week with PhD students developing a VR model of Nottingham. The model was made in unity engine and I was working on vehicle movement.
 \end{tabular}
