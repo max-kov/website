@@ -18,17 +18,10 @@ header-includes:
 ---
 
 
-\section*{Education}
-\begin{tabular}{L!{\VRule}R}
-2018 - present&{\bf Imperial College London} \hfill \textit{BEng. Computing}\\
-2016 - 2018&{\bf Chilwell Sixth Form} \hfill \textit{A-Levels}\\
-&Mathematics (A*), physics (A*), computing (A) and further mathematics (A) A-Levels. Participated in hackathons and Olympiads.
-\end{tabular}
-
 \section*{Employement}
 \begin{tabular}{L!{\VRule}R}
 Summer 2018&{\bf TNG Technology Consulting} \hfill \textit{Software Engineer Intern}\\
-&Built a Python Flask web application from scratch which provided important data from legal documents to simple NLP algorithms.
+&Developed a REST API with Flask for working with a large set of legal documents.
 \begin{itemize}
 \item Created a continuous integration pipeline with Jenkins, tox and pytest.
 \item Designed a normalised multi-table database schema to store document information
@@ -37,6 +30,13 @@ Summer 2018&{\bf TNG Technology Consulting} \hfill \textit{Software Engineer Int
 \item Performed data analysis of the legal document dataset using Pandas
 \item Acquired experience working in agile teams, writing good tests, presenting and talking to clients.
 \end{itemize}
+\end{tabular}
+
+\section*{Education}
+\begin{tabular}{L!{\VRule}R}
+2018 - present&{\bf Imperial College London} \hfill \textit{BEng. Computing}\\
+2016 - 2018&{\bf Chilwell Sixth Form} \hfill \textit{A-Levels}\\
+&Mathematics (A*), physics (A*), computing (A) and further mathematics (A) A-Levels. Participated in hackathons and Olympiads.
 \end{tabular}
 
 \section*{Projects}
