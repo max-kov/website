@@ -1,0 +1,19 @@
+---
+title: Two guy problem
+author: ~
+date: '2018-12-28'
+slug: two-guy-problem
+categories: ["riddle", "physics"]
+tags: ["riddle", "physics"]
+---
+
+There are 2 people in this riddle - person A and person B. Person B is positioned vertically below person A. Person A starts walking horizontally to the right and person B starts walking directly at person A at all times. The initial distance between them is *d* and they are walking at the same speed.
+
+```{r pressure, echo=FALSE, fig.cap="The two guy problem.", out.width = '100%'}
+knitr::include_graphics("gif.gif")
+```
+
+* Will person A ever reach person B? Why/Why not?
+* What will the eventual distance (*d'* in the figure) between them be? In other words, what will the distance between them tend to?
+
+
