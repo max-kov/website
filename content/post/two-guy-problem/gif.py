@@ -105,7 +105,7 @@ pygame.draw.line(surface, (0, 0, 0), (15, 50), (35, 50))
 pygame.draw.line(surface, (0, 0, 0), (15, 450), (35, 450))
 draw_letter_at(label_d, np.array([40, 250]))
 
-while person_a[0] < 900:
+while person_a[0] < 950:
     person_a, person_b, b_direction = move_guys(person_a, person_b)
     b_positions.append(to_int_matrix(person_b))
     a_positions.append(to_int_matrix(person_a))

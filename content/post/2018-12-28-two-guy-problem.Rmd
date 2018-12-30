@@ -13,7 +13,7 @@ There are 2 people in this riddle - person A and person B. Person B is positione
 knitr::include_graphics("gif.gif")
 ```
 
-* Will person A ever reach person B? Why/Why not?
+* Will person B ever reach person A? Why/Why not?
 * What will the eventual distance (*d'* in the figure) between them be? In other words, what will the distance between them tend to?
 
 
