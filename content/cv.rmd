@@ -1,0 +1,70 @@
+---
+title: Max Kovalovs
+output: pdf_document
+header-includes:
+ \usepackage{enumitem}
+ \usepackage{multicol}
+ \usepackage{graphicx}
+ \usepackage{lipsum}
+ \usepackage{array, xcolor}
+ \usepackage{geometry}
+ \definecolor{lightgray}{gray}{0.8}
+ \newcolumntype{L}{>{\raggedleft}p{0.17\textwidth}}
+ \newcolumntype{R}{p{0.8\textwidth}}
+ \newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
+ \pagenumbering{gobble}
+ \subtitle{max@maxkovalovs.us $\cdot$ github.com/max-kov}
+ \geometry{bottom=1cm,top=1cm}
+---
+
+
+\section*{Employement}
+\begin{tabular}{L!{\VRule}R}
+Summer 2018&{\bf TNG Technology Consulting} \hfill \textit{Software Engineer Intern}\\
+&Developed a REST API with Flask for working with a large set of legal documents.
+\begin{itemize}
+\item Created a continuous integration pipeline with Jenkins, tox and pytest.
+\item Designed a normalised multi-table database schema to store document information
+\item Dockerised the application for easy deployment.
+\item Developed a front end for uploading documents into the system.
+\item Performed data analysis of the legal document dataset using Pandas
+\item Acquired experience working in agile teams, writing good tests, presenting and talking to clients.
+\end{itemize}
+\end{tabular}
+
+\section*{Education}
+\begin{tabular}{L!{\VRule}R}
+2018 - present&{\bf Imperial College London} \hfill \textit{BEng. Computing}\\
+2016 - 2018&{\bf Chilwell Sixth Form} \hfill \textit{A-Levels}\\
+&Mathematics (A*), physics (A*), computing (A) and further mathematics (A) A-Levels. Participated in hackathons and Olympiads.
+\end{tabular}
+
+\section*{Projects}
+\begin{tabular}{L!{\VRule}R}
+2017&{\bf Pool Game}\hfill \textit{github.com/max-kov/pool}\\
+&A 2d top-down pool game written in python.
+\begin{itemize}
+\item Realistic ball collisions based on Newtonian mechanics
+\item Code analysis and testing pipelines with CodeClimate and TravisCI.
+\item Custom 3d ball rendering
+\end{itemize}\\
+2018&{\bf The Archived}\hfill \textit{maxkovalovs.us}\\
+&Personal blog on programming-related topics.
+\begin{itemize}
+\item Written in RMarkdown (Blogdown)
+\item Seamless compilation and deployment with TravisCI
+\item Hosted on GitHubPages
+\end{itemize}
+\end{tabular}
+
+\section*{Extra-curricular}
+\begin{tabular}{L!{\VRule}R}
+2013 - 2016&{\bf Progmeistars}\hfill \textit{Computer science school}\\
+&\begin{itemize}
+\item Took several programming courses at Progmeistars, where I learned the basics of programming. I did courses on graphics, OOP, algorithms and others.
+\item Was a part of a junior IOI team. We participated in many solo and team events. To prepare for olympiads we had weekly lessons where we've covered computer science topics like big O notation, sorting algorithms and trees.
+\end{itemize}\\
+July 2017&{\bf Nottingham Trent University}\hfill \textit{Experience}\\
+&Spent a week with PhD students developing a VR model of Nottingham. The model was made in unity engine and I was working on vehicle movement.
+\end{tabular}
+
