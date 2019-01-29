@@ -1,1 +1,7 @@
 *.html
+*.pdf
+.RData
+.Rhistory
+public/
+themes/
+
