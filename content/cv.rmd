@@ -24,10 +24,10 @@ Summer 2018&{\bf TNG Technology Consulting} \hfill \textit{Software Engineer Int
 &Developed a REST API with Flask for working with a large set of legal documents.
 \begin{itemize}
 \item Created a continuous integration pipeline with Jenkins, tox and pytest.
-\item Designed a normalised multi-table database schema to store document information
+\item Designed a normalised multi-table database schema to store document information.
 \item Dockerised the application for easy deployment.
 \item Developed a front end for uploading documents into the system.
-\item Performed data analysis of the legal document dataset using Pandas
+\item Performed data analysis of the legal document dataset using Pandas.
 \item Acquired experience working in agile teams, writing good tests, presenting and talking to clients.
 \end{itemize}
 \end{tabular}
@@ -44,16 +44,16 @@ Summer 2018&{\bf TNG Technology Consulting} \hfill \textit{Software Engineer Int
 2017&{\bf Pool Game}\hfill \textit{github.com/max-kov/pool}\\
 &A 2d top-down pool game written in python.
 \begin{itemize}
-\item Realistic ball collisions based on Newtonian mechanics
+\item Realistic ball collisions based on Newtonian mechanics.
 \item Code analysis and testing pipelines with CodeClimate and TravisCI.
-\item Custom 3d ball rendering
+\item Custom 3d ball rendering.
 \end{itemize}\\
 2018&{\bf The Archived}\hfill \textit{maxkovalovs.us}\\
 &Personal blog on programming-related topics.
 \begin{itemize}
-\item Written in RMarkdown (Blogdown)
-\item Seamless compilation and deployment with TravisCI
-\item Hosted on GitHubPages
+\item Written in RMarkdown (Blogdown).
+\item Seamless compilation and deployment with TravisCI.
+\item Hosted on GitHubPages.
 \end{itemize}
 \end{tabular}
 
@@ -67,4 +67,3 @@ Summer 2018&{\bf TNG Technology Consulting} \hfill \textit{Software Engineer Int
 July 2017&{\bf Nottingham Trent University}\hfill \textit{Experience}\\
 &Spent a week with PhD students developing a VR model of Nottingham. The model was made in unity engine and I was working on vehicle movement.
 \end{tabular}
-
