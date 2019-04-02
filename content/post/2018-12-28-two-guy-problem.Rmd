@@ -1,6 +1,6 @@
 ---
 title: Two guy problem
-author: ~
+author: Max Kovalovs
 date: '2018-12-28'
 slug: two-guy-problem
 categories: ["riddle", "physics"]
