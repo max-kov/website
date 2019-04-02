@@ -1,0 +1,23 @@
+li{
+    display: block;
+}
+
+.name{
+    font-weight: bold;
+    display: inline;
+    float: left;
+}
+
+.description{
+    font-style: italic;
+    display: inline;
+    float: right;
+}
+
+.cvHeading{
+    display: flow-root;
+}
+
+.name::before{
+    content:"-";
+}

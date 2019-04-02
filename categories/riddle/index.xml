@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Riddle on The Archived</title>
+    <link>/categories/riddle/</link>
+    <description>Recent content in Riddle on The Archived</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 28 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/riddle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Two guy problem</title>
+      <link>/post/two-guy-problem/</link>
+      <pubDate>Fri, 28 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/two-guy-problem/</guid>
+      <description>There are 2 people in this riddle - person A and person B. Person B is positioned vertically below person A. Person A starts walking horizontally to the right and person B starts walking directly at person A at all times. The initial distance between them is d and they are walking at the same speed.
+ Figure 1: The two guy problem.   Will person B ever reach person A?</description>
+    </item>
+    
+  </channel>
+</rss>

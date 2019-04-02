@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  
+
+  <link rel="icon" type="image/png" href="../../favicon.png">
+
+  <title>
+    
+    
+     Testing python applications with Pytest. 
+    
+  </title>
+  <link rel="canonical" href="../../post/testing-python-applications-with-pytest/">
+
+  <link rel="stylesheet" href="../../css/fonts.css" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="../../css/github.css" />
+  <link rel="stylesheet" href="../../css/maxs_website.css" />
+  <script src="../../js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  
+</head>
+
+<body>
+<section id=nav>
+  <h1><a href="../../">The Archived</a></h1>
+  <ul>
+    
+    <li><a href="../../cv.pdf">Resume</a></li>
+    
+    <li><a href="https://github.com/max-kov">GitHub</a></li>
+    
+    <li><a href="https://www.linkedin.com/in/max-kovalovs/">LinkedIn</a></li>
+    
+  </ul>
+</section>
+
+
+<section id=content>
+  <h1> Testing python applications with Pytest. </h1>
+
+  <div id=sub-header>
+    Max Kovalovs · 2018/07/28 · 4 minute read
+  </div>
+
+  <div class="entry-content">
+    
+
+<div id="TOC">
+<ul>
+<li><a href="#asserting-errors">Asserting Errors</a></li>
+<li><a href="#fixtures">Fixtures</a></li>
+<li><a href="#patching">Patching</a><ul>
+<li><a href="#tricky-imports">Tricky imports</a></li>
+</ul></li>
+<li><a href="#mocks">Mocks</a></li>
+<li><a href="#parametrization">Parametrization</a></li>
+</ul>
+</div>
+
+<div id="asserting-errors" class="section level1">
+<h1>Asserting Errors</h1>
+<pre><code>import pytest
+
+class TestDivByZero:
+    def test_div_by_zero(self):
+        with pytest.raises(ZeroDivisionError):
+            print(1/0)
+
+    def test_no_error(self):
+        with pytest.raises(ZeroDivisionError):
+            print(1/1)</code></pre>
+<pre><code>============================= test session starts ==============================
+platform linux -- Python 3.4.3, pytest-4.4.0, py-1.8.0, pluggy-0.9.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/travis/build/max-kov/website/content/post
+plugins: mock-1.10.3
+collecting ... collected 2 items
+
+testing-python-applications-with-pytest/test_zerodiv.py::TestDivByZero::test_div_by_zero PASSED [ 50%]
+testing-python-applications-with-pytest/test_zerodiv.py::TestDivByZero::test_no_error FAILED [100%]
+
+=================================== FAILURES ===================================
+_________________________ TestDivByZero.test_no_error __________________________
+
+self = &lt;test_zerodiv.TestDivByZero object at 0x7f0544c5f2b0&gt;
+
+    def test_no_error(self):
+        with pytest.raises(ZeroDivisionError):
+&gt;           print(1/1)
+E           Failed: DID NOT RAISE &lt;class &#39;ZeroDivisionError&#39;&gt;
+
+testing-python-applications-with-pytest/test_zerodiv.py:10: Failed
+----------------------------- Captured stdout call -----------------------------
+1.0
+====================== 1 failed, 1 passed in 0.03 seconds ======================</code></pre>
+</div>
+<div id="fixtures" class="section level1">
+<h1>Fixtures</h1>
+<p>A fixture is an object that is constructed specifically for the test and is passed as one of the parameters to the test. For example, you could create and return a database connection in a fixture, use it in a test and then close it in the fixture when the <em>scope</em> is closed. More <a href="https://docs.pytest.org/en/latest/example/simple.html">here</a>.</p>
+</div>
+<div id="patching" class="section level1">
+<h1>Patching</h1>
+<p>Mocks allow you to replace parts of your production system (which is being tested) with mock objects and make assertions about how they have been used or make them return specified values. Pytest has a very neat fixture plugin called <a href="https://github.com/pytest-dev/pytest-mock">pytest-mock</a>, which uses builtin <code>unittest</code> module but wraps it in a pytest fixture, removing the annotation boilerplate and almost makes it look like magic. The <code>patch</code> in <code>unittest</code> decorator allows you to specify which object we are going to replace with a mock. With <code>pytest-mock</code> the process looks like this:</p>
+<ul>
+<li>Testing target</li>
+</ul>
+<pre><code>import os
+
+def get_cwd_depth():
+    path = os.getcwd()
+    return path.count(&quot;/&quot;)</code></pre>
+<ul>
+<li>Testfile</li>
+</ul>
+<pre><code>import depth_counter1
+
+class TestMath:
+    def test_depth(self, mocker):
+        mocked_cwd = mocker.patch(&quot;os.getcwd&quot;)
+        mocked_cwd.return_value = &quot;/&quot;
+        assert depth_counter1.get_cwd_depth()==1</code></pre>
+<pre><code>============================= test session starts ==============================
+platform linux -- Python 3.4.3, pytest-4.4.0, py-1.8.0, pluggy-0.9.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/travis/build/max-kov/website/content/post
+plugins: mock-1.10.3
+collecting ... collected 1 item
+
+testing-python-applications-with-pytest/test_patch1.py::TestMath::test_depth PASSED [100%]
+
+=========================== 1 passed in 0.02 seconds ===========================</code></pre>
+<p>The <code>mocker</code> argument is actually a Mock module fixture, provided by <code>pytest-mock</code> (can be seen in function parameters). Pytest has several of those standard builtin fixtures which you can access in any test, to see all of the ones you have installed run:</p>
+<pre><code>pytest -q --fixtures</code></pre>
+<div id="tricky-imports" class="section level2">
+<h2>Tricky imports</h2>
+<p>Consider this example:</p>
+<ul>
+<li>Testing target</li>
+</ul>
+<pre><code>from os import getcwd
+
+def get_cwd_depth():
+    path = getcwd()
+    return path.count(&quot;/&quot;)</code></pre>
+<ul>
+<li>Testfile</li>
+</ul>
+<pre><code>import depth_counter2
+
+class TestMath:
+    def test_mock_in_os(self, mocker):
+        mocked_cwd = mocker.patch(&quot;os.getcwd&quot;)
+        mocked_cwd.return_value = &quot;/&quot;
+        assert depth_counter2.get_cwd_depth()==1
+
+    def test_mock_in_depth_counter(self, mocker):
+        mocked_cwd = mocker.patch(&quot;depth_counter2.getcwd&quot;)
+        mocked_cwd.return_value = &quot;/&quot;
+        assert depth_counter2.get_cwd_depth()==1</code></pre>
+<pre><code>============================= test session starts ==============================
+platform linux -- Python 3.4.3, pytest-4.4.0, py-1.8.0, pluggy-0.9.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/travis/build/max-kov/website/content/post
+plugins: mock-1.10.3
+collecting ... collected 2 items
+
+testing-python-applications-with-pytest/test_patch2.py::TestMath::test_mock_in_os FAILED [ 50%]
+testing-python-applications-with-pytest/test_patch2.py::TestMath::test_mock_in_depth_counter PASSED [100%]
+
+=================================== FAILURES ===================================
+___________________________ TestMath.test_mock_in_os ___________________________
+
+self = &lt;test_patch2.TestMath object at 0x7fef6939f710&gt;
+mocker = &lt;pytest_mock.MockFixture object at 0x7fef6939a048&gt;
+
+    def test_mock_in_os(self, mocker):
+        mocked_cwd = mocker.patch(&quot;os.getcwd&quot;)
+        mocked_cwd.return_value = &quot;/&quot;
+&gt;       assert depth_counter2.get_cwd_depth()==1
+E       assert 7 == 1
+E         -7
+E         +1
+
+home/travis/build/max-kov/website/content/post/testing-python-applications-with-pytest/test_patch2.py:7: AssertionError
+====================== 1 failed, 1 passed in 0.03 seconds ======================</code></pre>
+<p>Python veterans who know how python imports work, will realise that by importing using the <code>from</code> keyword, the testing file will have it’s own copy of the function, thus patching <code>os.getcwd</code> doesn’t do anything and patching <code>depth_counter2.py</code> does.</p>
+</div>
+</div>
+<div id="mocks" class="section level1">
+<h1>Mocks</h1>
+<p>Mocks don’t have to strictly substitute functionality in the testing function, they can also be passed as regular arguments:</p>
+<pre><code>from mock import Mock
+
+class TestRegister:
+    def test_under_18(self, mocker):
+        form = Mock()
+        form.age = &quot;17&quot;
+
+        assert not validate_age(form)</code></pre>
+<p>Here, instead of making a complicated form object with user data, we just make a mock that will have only the values that will be tested.</p>
+</div>
+<div id="parametrization" class="section level1">
+<h1>Parametrization</h1>
+<p>If you have loads of tests that run the same code on different input you can parametrize the tests:</p>
+<pre><code>import pytest
+
+class TestPower:
+    @pytest.mark.parametrize(&quot;testing_input,expected&quot;,
+                             [
+                                 ((2,3),8),
+                                 ((2,2),4),
+                                 ((2,1),2)
+                                   ],ids=[
+                            &quot;Two to the power of three&quot;,
+                            &quot;Two to the power of two&quot;,
+                            &quot;Two to the power of one&quot;
+                             ])
+    def test_power(self, testing_input, expected):
+        assert testing_input[0]**testing_input[1]==expected</code></pre>
+<pre><code>============================= test session starts ==============================
+platform linux -- Python 3.4.3, pytest-4.4.0, py-1.8.0, pluggy-0.9.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/travis/build/max-kov/website/content/post
+plugins: mock-1.10.3
+collecting ... collected 3 items
+
+testing-python-applications-with-pytest/test_parametrised.py::TestPower::test_power[Two to the power of three] PASSED [ 33%]
+testing-python-applications-with-pytest/test_parametrised.py::TestPower::test_power[Two to the power of two] PASSED [ 66%]
+testing-python-applications-with-pytest/test_parametrised.py::TestPower::test_power[Two to the power of one] PASSED [100%]
+
+=========================== 3 passed in 0.02 seconds ===========================</code></pre>
+<p>When you run <code>pytest --verbose</code> the test id string will be printed along with the string. Still, different groups of tests should be grouped together in different test functions or test classes.</p>
+</div>
+
+  </div>
+
+  <div id=links>
+    
+    
+      <a class="basic-alignment left" href="../../post/git-tricks/">Git tricks &raquo;</a>
+    
+  </div>
+</section>
+
+<section id="comments">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+      
+      
+      if (window.location.hostname == "localhost")
+                return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = '';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-131769803-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+
+</body>
+</html>
+

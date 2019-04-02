@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on The Archived</title>
+    <link>/categories/python/</link>
+    <description>Recent content in Python on The Archived</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 20 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Assert vs raise</title>
+      <link>/post/assert-vs-raise/</link>
+      <pubDate>Thu, 20 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/assert-vs-raise/</guid>
+      <description>Intro In a perfect world nobody would need exceptions in their programs, however, often unexpected things happen during runtime - invalid values get submitted, users make typos when writing paths and so on. To handle this developers use exceptions - upon encountering an abnormal situation (e.g. division by zero) the normal execution flow is interrupted, until the exception is dealt with. In python, doing this would look like this:</description>
+    </item>
+    
+    <item>
+      <title>Testing python applications with Pytest.</title>
+      <link>/post/testing-python-applications-with-pytest/</link>
+      <pubDate>Sat, 28 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/testing-python-applications-with-pytest/</guid>
+      <description>Asserting Errors Fixtures Patching Tricky imports  Mocks Parametrization   Asserting Errors import pytest class TestDivByZero: def test_div_by_zero(self): with pytest.raises(ZeroDivisionError): print(1/0) def test_no_error(self): with pytest.raises(ZeroDivisionError): print(1/1) ============================= test session starts ============================== platform linux -- Python 3.4.3, pytest-4.4.0, py-1.8.0, pluggy-0.9.0 -- /usr/bin/python3 cachedir: .pytest_cache rootdir: /home/travis/build/max-kov/website/content/post plugins: mock-1.10.3 collecting ... collected 2 items testing-python-applications-with-pytest/test_zerodiv.py::TestDivByZero::test_div_by_zero PASSED [ 50%] testing-python-applications-with-pytest/test_zerodiv.py::TestDivByZero::test_no_error FAILED [100%] =================================== FAILURES =================================== _________________________ TestDivByZero.test_no_error __________________________ self = &amp;lt;test_zerodiv.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  
+
+  <link rel="icon" type="image/png" href="../../favicon.png">
+
+  <title>
+    
+    
+     Assert vs raise 
+    
+  </title>
+  <link rel="canonical" href="../../post/assert-vs-raise/">
+
+  <link rel="stylesheet" href="../../css/fonts.css" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="../../css/github.css" />
+  <link rel="stylesheet" href="../../css/maxs_website.css" />
+  <script src="../../js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  
+</head>
+
+<body>
+<section id=nav>
+  <h1><a href="../../">The Archived</a></h1>
+  <ul>
+    
+    <li><a href="../../cv.pdf">Resume</a></li>
+    
+    <li><a href="https://github.com/max-kov">GitHub</a></li>
+    
+    <li><a href="https://www.linkedin.com/in/max-kovalovs/">LinkedIn</a></li>
+    
+  </ul>
+</section>
+
+
+<section id=content>
+  <h1> Assert vs raise </h1>
+
+  <div id=sub-header>
+    Max Kovalovs · 2018/09/20 · 3 minute read
+  </div>
+
+  <div class="entry-content">
+    
+
+
+<div id="intro" class="section level1">
+<h1>Intro</h1>
+<p>In a perfect world nobody would need exceptions in their programs, however, often unexpected things happen during runtime - invalid values get submitted, users make typos when writing paths and so on. To handle this developers use exceptions - upon encountering an abnormal situation (e.g. division by zero) the normal execution flow is interrupted, until the exception is dealt with. In python, doing this would look like this:</p>
+<pre><code>def calculate_pizza_area(pizza_radius, people_eating=1):
+    &#39;&#39;&#39;
+    Calculates the area of the pizza that each person will receive, assuming
+    the pizza is split equally among all people.
+    &#39;&#39;&#39;
+    if people_eating==0:
+        raise ZeroDivisionError
+    return (3.1415*(pizza_radius**2))/people_eating
+
+
+print(calculate_pizza_area(3))
+print(calculate_pizza_area(3, people_eating=0))</code></pre>
+<pre><code>28.2735
+Traceback (most recent call last):
+  File &quot;assert-vs-raise/pizza_slice_raise.py&quot;, line 12, in &lt;module&gt;
+    print(calculate_pizza_area(3, people_eating=0))
+  File &quot;assert-vs-raise/pizza_slice_raise.py&quot;, line 7, in calculate_pizza_area
+    raise ZeroDivisionError
+ZeroDivisionError</code></pre>
+<p>However, python has assertion statements, which do a similar thing:</p>
+<pre><code>def calculate_pizza_area(pizza_radius, people_eating=1):
+    &#39;&#39;&#39;
+    Calculates the area of the pizza that each person will receive, assuming
+    the pizza is split equally among all people.
+    &#39;&#39;&#39;
+    assert people_eating!=0
+    return (3.1415*(pizza_radius**2))/people_eating
+
+
+print(calculate_pizza_area(3))
+print(calculate_pizza_area(3, people_eating=0))</code></pre>
+<pre><code>28.2735
+Traceback (most recent call last):
+  File &quot;assert-vs-raise/pizza_slice_assert.py&quot;, line 11, in &lt;module&gt;
+    print(calculate_pizza_area(3, people_eating=0))
+  File &quot;assert-vs-raise/pizza_slice_assert.py&quot;, line 6, in calculate_pizza_area
+    assert people_eating!=0
+AssertionError</code></pre>
+</div>
+<div id="differences" class="section level1">
+<h1>Differences</h1>
+<p>Both keywords are used to raise an exception but there are some key differences:</p>
+<ul>
+<li><code>assert</code> cannot specify the type of the error raised, it will always raise <code>AssertionError</code>.</li>
+<li>As a result of the previous point, <code>assert</code> statements become more readable because they only take one line of code.</li>
+<li><code>assert</code> statements can be fully disabled during runtime using the <code>-O</code> flag a.k.a. the optimise mode.</li>
+</ul>
+</div>
+<div id="use-cases" class="section level1">
+<h1>Use cases</h1>
+<p>Assertions are expressions that are assumed or asserted to be true. Therefore, programmers usually use assertions to state the conditions that are <em>required</em> to be true for the program to run. However, if a user submitted a wrong path to the required file, even though the program cannot execute further, we only need to ask the user to check and correct the submitted path, hence a <code>raise FileNotFoundError</code> would be more appropriate.</p>
+<p>On the other hand, if our function received a string instead of an integer as one of its inputs, we cannot fix receiving a different type of input because it is one of the requirements for the procedure to run.</p>
+</div>
+<div id="conclusion" class="section level1">
+<h1>Conclusion</h1>
+<p><code>assert</code> statements could be used effectively to describe the expected input/conditions of the function during development time, due to their smaller code size comparing to <code>raise</code> statements. Instead of writing the preconditions of a functions in comments, assertions are a powerful way to signal these conditions to the user. However, assertions cannot replace <code>raise</code> statements, not only because they can be disabled with the <code>-O</code> flag, but also because they give more descriptive errors which will help debugging in production.</p>
+<p><code>assert</code> statements should never be used for input validation and to detect other predictable errors during runtime, they should be handled with <code>raise</code> statements.</p>
+</div>
+
+  </div>
+
+  <div id=links>
+    
+      <a class="basic-alignment left" href="../../post/git-tricks/">&laquo; Git tricks</a>
+    
+    
+      <a class="basic-alignment left" href="../../post/two-guy-problem/">Two guy problem &raquo;</a>
+    
+  </div>
+</section>
+
+<section id="comments">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+      
+      
+      if (window.location.hostname == "localhost")
+                return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = '';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-131769803-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+
+</body>
+</html>
+

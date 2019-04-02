@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on The Archived</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on The Archived</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 28 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Two guy problem</title>
+      <link>/post/two-guy-problem/</link>
+      <pubDate>Fri, 28 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/two-guy-problem/</guid>
+      <description>There are 2 people in this riddle - person A and person B. Person B is positioned vertically below person A. Person A starts walking horizontally to the right and person B starts walking directly at person A at all times. The initial distance between them is d and they are walking at the same speed.
+ Figure 1: The two guy problem.   Will person B ever reach person A?</description>
+    </item>
+    
+    <item>
+      <title>Assert vs raise</title>
+      <link>/post/assert-vs-raise/</link>
+      <pubDate>Thu, 20 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/assert-vs-raise/</guid>
+      <description>Intro In a perfect world nobody would need exceptions in their programs, however, often unexpected things happen during runtime - invalid values get submitted, users make typos when writing paths and so on. To handle this developers use exceptions - upon encountering an abnormal situation (e.g. division by zero) the normal execution flow is interrupted, until the exception is dealt with. In python, doing this would look like this:</description>
+    </item>
+    
+    <item>
+      <title>Git tricks</title>
+      <link>/post/git-tricks/</link>
+      <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/git-tricks/</guid>
+      <description>The interactive rebase The interactive rebase is one of the most powerful tools in git. The idea of the rebase is to change the base of a branch to something different, replaying unique commits on top of the base. In a way this is a cherry-pick that picks the whole branch instead of a single commit. The interactive rebase allows the user to rebase, but also edit the commits before rebasing.</description>
+    </item>
+    
+    <item>
+      <title>Testing python applications with Pytest.</title>
+      <link>/post/testing-python-applications-with-pytest/</link>
+      <pubDate>Sat, 28 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/testing-python-applications-with-pytest/</guid>
+      <description>Asserting Errors Fixtures Patching Tricky imports  Mocks Parametrization   Asserting Errors import pytest class TestDivByZero: def test_div_by_zero(self): with pytest.raises(ZeroDivisionError): print(1/0) def test_no_error(self): with pytest.raises(ZeroDivisionError): print(1/1) ============================= test session starts ============================== platform linux -- Python 3.4.3, pytest-4.4.0, py-1.8.0, pluggy-0.9.0 -- /usr/bin/python3 cachedir: .pytest_cache rootdir: /home/travis/build/max-kov/website/content/post plugins: mock-1.10.3 collecting ... collected 2 items testing-python-applications-with-pytest/test_zerodiv.py::TestDivByZero::test_div_by_zero PASSED [ 50%] testing-python-applications-with-pytest/test_zerodiv.py::TestDivByZero::test_no_error FAILED [100%] =================================== FAILURES =================================== _________________________ TestDivByZero.test_no_error __________________________ self = &amp;lt;test_zerodiv.</description>
+    </item>
+    
+  </channel>
+</rss>
