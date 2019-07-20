@@ -1,0 +1,101 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Graduate Curriculum Vitae
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Rensselaer Polytechnic Institute (http://www.rpi.edu/dept/arc/training/latex/resumes/)
+%
+% Important note:
+% This template requires the res.cls file to be in the same directory as the
+% .tex file. The res.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[margin, 10pt]{res} % Use the res.cls style, the font size can be changed to 11pt or 12pt here
+
+\usepackage{helvet} % Default font is the helvetica postscript font
+%\usepackage{newcent} % To change the default font to the new century schoolbook postscript font uncomment this line and comment the one above
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+ 
+\setlength{\textwidth}{5.1in} % Text width of the document
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	NAME AND ADDRESS SECTION
+%----------------------------------------------------------------------------------------
+
+\moveleft.5\hoffset\centerline{\large\bf Max Kovalovs} % Your name at the top
+ 
+\moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip % Horizontal line after name; adjust line thickness by changing the '1pt'
+ 
+\moveleft.5\hoffset\centerline{\llap{\href{mailto:max@maxkovalovs.us}{\it{max@maxkovalovs.us}} $\cdot$ }\href{https://github.com/max-kov}{\it{github.com/max-kov}}\rlap{ $\cdot$ \href{https://linkedin.com/in/max-kov}{\it{linkedin.com/in/max-kov}}}}
+
+%----------------------------------------------------------------------------------------
+
+\begin{resume}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{EDUCATION}
+
+{\sl Imperial College London,} Computer Science \hfill 2018-2021\\
+Penultimate year student. Completed first year with a first.
+ 
+%----------------------------------------------------------------------------------------
+%	PROFESSIONAL EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+ 
+\section{EXPERIENCE}
+
+{\sl Software Engineer Intern} \hfill Summer 2019\\
+Gearset Limited, Cambridge, UK
+
+\begin{itemize} \itemsep -2pt % Reduce space between items
+\item Developed four ``user friendly" forecasting systems each of which produces 18 to 139 individual reports. 
+\item Developed or improved almost all IFPS programs used for financial reports. 
+\end{itemize}
+ 
+{\sl Software Engineer Intern} \hfill Summer 2018\\
+\href{https://www.tngtech.com/en.html}{TNG Technology Consulting GmbH}, Munich, Germany
+
+\begin{itemize} \itemsep -2pt
+	\item Developed a REST API with Flask for working with a large set of legal documents.
+    \item Created a continuous integration pipeline with Jenkins, tox and pytest.
+    \item Designed a normalised multi-table database schema to store document information.
+    \item Dockerised the application for easy deployment.
+    \item Developed a front end for uploading documents into the system.
+    \item Performed data analysis of the legal document dataset using Pandas.
+    \item Acquired experience working in agile teams, writing good tests, presenting and talking to clients.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	EXTRA-CURRICULAR ACTIVITIES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{EXTRA-CURRICULAR \\ ACTIVITIES} 
+
+Elected {\it House Manager}, Rho Phi Sorority \\
+Elected {\it Sports Chairman} \\
+Attended Krannet Leadership Conference \\
+Headed delegation to Rho Phi Congress \\
+Junior varsity basketball team \\
+Participant, seven intramural athletic teams 
+
+%----------------------------------------------------------------------------------------
+
+\end{resume}
+\end{document}
