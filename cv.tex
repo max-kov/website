@@ -27,8 +27,12 @@
 
 \usepackage{hyperref}
 \hypersetup{colorlinks=false}
+
  
 \setlength{\textwidth}{5.1in} % Text width of the document
+\setlength{\topmargin}{-12mm}
+\setlength{\textheight}{12in}
+
 
 \begin{document}
 
@@ -45,20 +49,18 @@
 %----------------------------------------------------------------------------------------
 
 \begin{resume}
-
-\section{EDUCATION}
-
-{\sl Imperial College London,} Computer Science \hfill 2018 to 2021\\
-Penultimate year student. Completed first year with a first.
  
 \section{EXPERIENCE}
 
 {\sl Software Engineer Intern} \hfill Summer 2019\\
 Gearset Limited, Cambridge, UK
 
-\begin{itemize} \itemsep -2pt % Reduce space between items
-    \item Worked with functional javascript to add a dynamic task filter using Knockout JS, lodash and Squire.
-    \item Worked with C\# and github API to show whether a branch could be deployed into in the app.
+\begin{itemize} \itemsep -2pt
+    \item Integrated the app with GitHub using GitHub API. Added PR commit status reporting for in-app CI jobs, branch filtering based on protection status and scheduling jobs in the app via webhooks.
+    \item Worked with Knockout JS and lodash to develop frontend features.
+    \item Implemented row level security for a Postgres database.
+    \item Wrote SQL queries and made schema changes for the production database when working on other backend features.
+    \item Tested my code using C\# NUnit and Moq, and Javascript Squire.
 \end{itemize}
  
 {\sl Software Engineer Intern} \hfill Summer 2018\\
@@ -67,22 +69,35 @@ Gearset Limited, Cambridge, UK
 \begin{itemize} \itemsep -2pt
 	\item Developed a REST API with Flask for working with a large set of legal documents.
     \item Created a continuous integration pipeline with Jenkins, tox and pytest.
-    \item Designed a normalised multi-table database schema to store document information.
+    \item Designed a database to store document information.
     \item Dockerised the application for easy deployment.
     \item Developed a front end for uploading documents into the system.
-    \item Performed data analysis of the legal document dataset using Pandas.
     \item Acquired experience working in agile teams, writing good tests, presenting and talking to clients.
 \end{itemize}
 
+\section{EDUCATION}
+
+{\sl Imperial College London,} Computer Science \hfill 2018 to 2021\\
+Penultimate year student. Finished first year with a first.
+
 \section{PROJECTS}
 
+{\sl Flight Delay Prediction} \hfill \href{https://www.kaggle.com/maxkov/kernel73680eb2cf}{kaggle.com/maxkov/kernel73680eb2cf}\\
+My solution to predicting flight delays using the Kaggle flights dataset.
+
+\begin{itemize} \itemsep -2pt
+\item Used Pandas to select, group and edit the dataset which had more that 5 million rows.
+\item Used scikit-learn to fit a linear regression machine learning model.
+\item Visualised the data using Seaborn and Matplotlib.
+\end{itemize}
+
 {\sl Pool Game} \hfill \href{https://github.com/max-kov/pool}{github.com/max-kov/pool}\\
-A 2d top-down pool game written in python.
+A 2d top-down pool game written in Python.
 
 \begin{itemize} \itemsep -2pt
 \item Realistic ball collisions based on Newtonian mechanics.
 \item Code analysis and testing pipelines with CodeClimate and TravisCI.
-\item Custom 3d ball rendering.
+\item 3d ball rotation animation using linear algebra.
 \end{itemize}
 
 {\sl The Archived}\hfill \href{https://maxkovalovs.us}{maxkovalovs.us}\\
@@ -99,8 +114,8 @@ Personal blog on programming-related topics.
 {\sl Progmeistars} \hfill 2013 to 2016\\
 Took several programming courses at Progmeistars computer science school, where I learned the basics.
 
-\begin{itemize}
-\item Did courses on graphics, OOP, algorithms and low level programming in C.
+\begin{itemize} \itemsep -2pt
+\item Did courses on OOP and algorithms in Pascal programming language.
 \item Was a part of a junior IOI team. We participated in many solo and team events. To prepare for Olympiads we had weekly lessons where we've covered computer science topics like big $\mathcal{O}$ notation, sorting algorithms and trees.
 \end{itemize}
 
